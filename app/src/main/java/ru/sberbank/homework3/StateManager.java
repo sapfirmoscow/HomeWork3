@@ -2,6 +2,11 @@ package ru.sberbank.homework3;
 
 public class StateManager {
     private static final StateManager instanse;
+
+    static {
+        instanse = new StateManager();
+    }
+
     private State state;
 
     public StateManager() {
@@ -10,10 +15,6 @@ public class StateManager {
 
     public static StateManager getInstanse() {
         return instanse;
-    }
-
-    static {
-        instanse = new StateManager();
     }
 
     public State getState() {
